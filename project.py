@@ -7,7 +7,7 @@ import pandas as pd
 import time
 
 
-SERVICE = Service('C:/Users/doga/OneDrive/Masaüstü/chromedriver.exe')
+SERVICE = Service('YOUR CHRORME_DRIVER_.EXE')
 DRIVER = webdriver.Chrome(service=SERVICE)
 
 
