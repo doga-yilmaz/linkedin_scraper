@@ -74,7 +74,7 @@ job_link = []
 expected_skills = []
 
 
-def scrape_all_datas():
+def scrape_all_data():
     all_listings = DRIVER.find_elements(By.CLASS_NAME, 'jobs-search-results__list-item')
     for listing in all_listings:
         listing.click()
@@ -101,19 +101,19 @@ def scrape_all_datas():
 
 last_page = 9
 
-scrape_all_datas()
+scrape_all_data()
 for i in range(1, last_page):
     pages = DRIVER.find_elements(By.CLASS_NAME, 'artdeco-pagination__indicator.artdeco-pagination__indicator--number')
     pages[i].click()
     time.sleep(5)
-    scrape_all_datas()
+    scrape_all_data()
     if i == 8:
         while last_page < 15:
             pages = DRIVER.find_elements(By.CLASS_NAME, 'artdeco-pagination__indicator.artdeco-pagination__indicator--number')
             pages[6].click()
             last_page += 1
             time.sleep(5)
-            scrape_all_datas()
+            scrape_all_data()
 
 
 
